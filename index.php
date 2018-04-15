@@ -2,16 +2,19 @@
 
 $numb = 10;
 
+//Create array
 $users = array('name' => 'Anton', 'surname' => 'Tutunnik');
 
+//Add element to array
 $users[1] = 'Mykola';
 
+//Delete element from array
 unset($users[1]);
 
+//Array lenght
 $sum = count($users);
 
-echo $sum;
-
+//Two-Dimensional array
 $array = array(
     array('name' => 'Bob', 'age' => '20'),
     array('name' => 'John', 'age' => '30'),
@@ -32,7 +35,6 @@ for ($i = 0; $i < count($array); $i++){
 
 }
 
-
 echo '<br>';
 
 foreach ($array as $key => $users) {
@@ -41,7 +43,6 @@ foreach ($array as $key => $users) {
 }
 
 echo '<br>';
-
 
 foreach ($array as $users) {
     var_dump($users);
