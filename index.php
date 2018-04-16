@@ -48,3 +48,31 @@ foreach ($array as $users) {
     var_dump($users);
 }
 
+//Explode разделяет строку на части
+$result = explode(',', 'Kartoffel, Soßen, Schinken, Wein usw.');
+
+//Значение параметра в функции по умолчанию
+function myFunction($name = "John"){
+    echo 'Hello ' . $name . '<br>';
+}
+
+myFunction();
+myFunction("Mykola");
+
+// Доступ к глобальным переменным внутри функции
+$name1 = 'Alex';
+$name2 = 'Viktor';
+
+function test(){
+    
+    $name3 = 'Wladimir';
+    
+    // Способ №1
+    global $name1;
+    echo 'Privet ' . $name1 . '<br>';
+    
+    // Способ №2 используя спец. массив $GLOBALS 
+    echo 'Privet ' . $GLOBALS['name2'] . '<br>';
+}
+
+test();
