@@ -76,3 +76,14 @@ function test(){
 }
 
 test();
+
+// Передача аргументов по ссылке 6 - 21:40
+function test2(&$arg){
+    $arg = 5;
+}
+
+$beta = 10;
+
+test2($beta);
+
+echo $beta;
