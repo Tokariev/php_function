@@ -86,4 +86,48 @@ $beta = 10;
 
 test2($beta);
 
-echo $beta;
+echo 'Beta = ' . $beta . '<br>';
+
+//Статические переменные
+function howManyTimes(){
+    static $a = 0;
+    echo ++$a . '<br>';
+}
+
+howManyTimes();
+howManyTimes();
+howManyTimes();
+
+// Рекурсивная функция Ex. 6, Time 26:20
+var_dump('Is 44 Array? ' . is_array(44));
+var_dump('Is $array Array? ' . is_array($array ));
+
+// Встроенные возможности Ex. 7 
+$arr1 = [1,2,3,4,5,6,7,8];
+$arr2 = array(1,2,3,4,5,6,7,8);
+
+
+$a;
+$b = 4;
+
+var_dump('Задано ли значение $a ' . isset($a));
+var_dump('Задано ли значение $a ' . isset($b));
+
+echo ('Считаеться ли переменная пустой? ' . empty($a));
+
+//get_defined_vars
+//При помощи её мы можем получить все переменные в данном месте программы
+echo '<pre>';
+print_r (get_defined_vars());
+echo '</pre>';
+
+
+// Форматирование строк
+$city = 'London';
+$percent = 22 / 41 * 100;
+$total = 1000;
+
+echo $percent . '<br>'; //53.658536585366
+
+$format = 'По данным статистики %.2f из %d опрошенных в городе %s'; 
+printf($format, $percent, $total, $city); //Ex. 7 -> 14:50
